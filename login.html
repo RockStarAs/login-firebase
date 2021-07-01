@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body id="myId">
+    <section class="register-account">
+        <div class="signform">
+            <div class="left"><a href="#" style="float:right;margin-right:35px;font-size: 0.9em;" class="bts-a">Don't
+                    have an account? Sign up!</a>
+                <div class="bts">
+                    <a href="#" id="btn_fb_login" class="fblogin social"><i class="fa fa-facebook"></i><span>Iniciar con
+                            Facebook</span></a>
+                    <a href="#" id="btn_google_login" class="gplogin social"><i class="fa fa-google-plus"></i><span>Iniciar con
+                            Google</span></a>
+                </div>
+            </div>
+            <div class="right">
+                <div class="headit">
+                    <h4>Login To Your Account</h4>
+                </div>
+                <div class="form">
+                    <form class="login-form" id="login-form">
+                        <input type="text" placeholder="User Name" />
+                        <input type="password" placeholder="Password" />
+                        <input class="subbt" type="submit" value="Sign In" style="border:none;" />
+                    </form>
+                    <input type="checkbox" id="remember" name="remember"><span style="color:#b6b6b6;font-size: 0.9em;">
+                        Remember Me</span><a href="#">Forgot your password?</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SCRIPTS PARA EL FIREBASE -->
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyC9ZfhXsq0mA2E05me_FLCQZs94WKsKJeE",
+            authDomain: "practica-login-85c65.firebaseapp.com",
+            projectId: "practica-login-85c65",
+            storageBucket: "practica-login-85c65.appspot.com",
+            messagingSenderId: "6078883445",
+            appId: "1:6078883445:web:9e2eba5c4406d6926c7a3c"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        const auth = firebase.auth();
+        //const fs = firebase.firestore();
+    </script>
+    <script src="registro.js"></script>
+</body>
+
+</html>
